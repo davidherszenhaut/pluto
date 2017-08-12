@@ -1,0 +1,222 @@
+/******************
+    GENERAL CHANGES
+*******************/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    line-height: 1;
+}
+
+.wrapper {
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+/******************
+    TYPOGRAPHY
+*******************/
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+h5 {
+    font-size: 2rem
+}
+
+h6 {
+    font-size: 1.4rem;
+}
+
+/******************
+    LISTS
+*******************/
+
+/******************
+    ROWS
+*******************/
+
+.cols {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: left;
+}
+
+/******************
+    COLUMNS
+*******************/
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.col-title + h6 + p {
+    text-align: justify;
+}
+
+.col {
+    padding: 0 1rem;
+}
+
+.col {
+    padding: 0 1rem;
+}
+
+.col-1 {
+    flex-grow: 1;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.col-3 {
+    flex-grow: 3;
+}
+
+.col-4 {
+    flex-grow: 4;
+}
+
+.col-5 {
+    flex-grow: 5;
+}
+
+.col-6 {
+    flex-grow: 6;
+}
+
+.col-7 {
+    flex-grow: 7;
+}
+
+.col-8 {
+    flex-grow: 8;
+}
+
+.col-9 {
+    flex-grow: 9;
+}
+
+.col-10 {
+    flex-grow: 10;
+}
+
+.col-11 {
+    flex-grow: 11;
+}
+
+.col-12 {
+    flex-grow: 12;
+}
+
+/******************
+    TILES
+*******************/
+
+/******************
+    BLOCKQUOTES
+*******************/
+
+blockquote {
+    border-left: 5px solid #a9b1bc;
+    padding: 0.5rem;
+    padding-left: 3rem;
+    background: #dfdfdf;
+    border-radius: 3px;
+}
+
+/******************
+    PRE AND CODE
+*******************/
+
+pre > code {
+    white-space: pre;
+    display: block;
+}
+
+code {
+    border: 1px solid #a9b1bc;
+    border-radius: 3px;
+    background: #dfdfdf;
+    white-space: nowrap;
+}
+
+/******************
+    BUTTONS
+*******************/
+
+/******************
+    FORMS
+*******************/
+
+/******************
+    TABLES
+*******************/
+
+/******************
+    NAVIGATION
+*******************/
+
+.nav-list {
+    text-align: center;
+    padding: 2rem;
+}
+
+.nav-list-item {
+    padding: 0 1rem;
+}
+
+/******************
+    ANIMATIONS
+*******************/
+
+/******************
+    LOADERS
+*******************/
+
+/******************
+    IMAGES
+*******************/
+
+img {
+    height: auto;
+}
+
+/******************
+    HEADER
+*******************/
+
+.header {
+    text-align: center;
+}
+
+.header-title {
+    letter-spacing: 5px;
+}
+
+.header-subtitle {
+    font-weight: normal;
+}
