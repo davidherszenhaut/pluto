@@ -16,6 +16,7 @@
 
   <title>Pluto CSS Framework</title>
 
+  <link rel="stylesheet" href="css/gray-theme.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pluto.css">
 
@@ -23,17 +24,6 @@
 
   <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
-
-  <!--
-
-    TODO
-
-    - add vendor prefixes
-    - loaders, nav lists, bounce/pulse
-    - fix row/column
-    - separate framework and style
-
-  -->
 
 </head>
 
@@ -47,9 +37,9 @@
 
   <div class="nav-list">
 
-    <a href="#get-pluto" class="nav-list-item">Get Pluto</a>
-    <a href="#getting-started" class="nav-list-item">Getting Started</a>
-    <a href="https://github.com/davidherszenhaut/pluto" class="nav-list-item">Github</a>
+    <a class="nav-list-item" href="#get-pluto">Get Pluto</a>
+    <a class="nav-list-item" href="#getting-started">Getting Started</a>
+    <a class="nav-list-item" href="https://github.com/davidherszenhaut/pluto">Github</a>
 
   </div>
 
@@ -73,29 +63,38 @@
 
     <h3 class="section-title">Features</h2>
 
-    <div class="rows">
+    <div class="tiles">
 
-      <div class="col">
+      <div class="tile">
 
-        <h4 class="col-title">Simple</h3>
-        <h6>svg</h6>
-        <p>Pluto uses very intuitive class names to allow for quick and easy setup.</p>
-
-      </div>
-
-      <div class="col">
-
-        <h4 class="col-title">Fast</h3>
-        <h6>svg</h6>
-        <p>Pluto's small size (only ???) means that pages load as soon as possible.</p>
+        <h4 class="tile-title">Simple</h3>
+        <svg class="simple" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+          <path d="M 5 65 L 45 95 L 95 10 L 95 5 L 45 90 L 5 60 Z" stroke="black" stroke-width="5" />
+        </svg>
+        <p class="tile-text">Pluto uses very intuitive class names to allow for quick and easy setup.</p>
 
       </div>
 
-      <div class="col">
+      <div class="tile">
 
-        <h4 class="col-title">Lively</h3>
-        <h6>svg</h6>
-        <p>Pluto's built-in animations means spending more time on building.</p>
+        <h4 class="tile-title">Fast</h3>
+        <svg class="simple" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+          <path d="M 5 65 L 45 95 L 95 10 L 95 5 L 45 90 L 5 60 Z" stroke="black" stroke-width="5" />
+        </svg>
+        <p class="tile-text">Pluto's small size (only ???) means that pages load as soon as possible.</p>
+
+      </div>
+
+      <div class="tile">
+
+        <h4 class="tile-title">Lively</h3>
+        <svg class="simple" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+          <path d="M 5 95 L 50 35 M 5 95 L 70 75 M 50 35" stroke="black" stroke-width="5" />
+          <path d="M 50 35 C 70 45, 80 65, 70 75" stroke="black" stroke-width="5" />
+          <path d="M 50 35 C 70 55, 80 65, 70 75" stroke="black" stroke-width="5" />
+          <path d="M 50 35 L 75 1 M 70 75 L 100 66 M 65 50 L 95 30" stroke="black" stroke-width="5" />
+        </svg>
+        <p class="tile-text">Pluto's built-in animations means spending more time on building.</p>
 
       </div>
 
@@ -113,19 +112,19 @@
 
     <h3 class="section-title">Get Pluto</h2>
 
-    <div class="cols">
+    <div class="rows">
 
       <div class="row">
 
         <h4 class="row-title">Raw CSS</h3>
-        <pre><code>https://linkgoeshere.com</code></pre>
+        <pre><code class="cdn-link">https://linkgoeshere.com</code></pre>
 
         </div>
 
       <div class="row">
 
         <h4 class="row-title">RawGit CDN</h3>
-        <pre><code>https://linkgoeshere.com</code></pre>
+        <pre><code class="cdn-link">https://linkgoeshere.com</code></pre>
 
       </div>
 
@@ -242,12 +241,15 @@
 
     <pre><code>
 
+    &lt;!-- Unordered List --&gt;
     &lt;ul&gt;
+      &lt;!-- List Item --&gt;
       &lt;li&gt;
         Item 1
       &lt;/li&gt;
       &lt;li&gt;
         Item 2
+        &lt;!-- Nested Unordered List&gt;
         &lt;ul&gt;
           &lt;li&gt;Sub Item 1&lt;/li&gt;
           &lt;li&gt;Sub Item 2&lt;/li&gt;
@@ -273,64 +275,68 @@
 
     <h3 class="section-title">Rows and Columns</h2>
 
-    <p>Rows are created with the <code>rows</code> class and the children should have the <code>col</code> class. <code>col</code> items can have sizes <code>col-1</code> through <code>col-12</code>.</p>
+    <p>Columns are created with the <code>cols</code> class and the children should have the <code>col</code> class. <code>col</code> items can have sizes <code>col-1</code> through <code>col-12</code>.</p>
 
-    <div class="rows">
+    <div class="cols">
       <div class="col col-12"><pre><code>col-12</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-1"><pre><code>col-1</code></pre></div><div class="col col-11"><pre><code>col-11</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-2"><pre><code>col-2</code></pre></div><div class="col col-10"><pre><code>col-10</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-3"><pre><code>col-3</code></pre></div><div class="col col-9"><pre><code>col-9</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-4"><pre><code>col-4</code></pre></div><div class="col col-8"><pre><code>col-8</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-5"><pre><code>col-5</code></pre></div><div class="col col-7"><pre><code>col-7</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-6"><pre><code>col-6</code></pre></div><div class="col col-6"><pre><code>col-6</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-7"><pre><code>col-7</code></pre></div><div class="col col-5"><pre><code>col-5</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-8"><pre><code>col-8</code></pre></div><div class="col col-4"><pre><code>col-4</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-9"><pre><code>col-9</code></pre></div><div class="col col-3"><pre><code>col-3</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-10"><pre><code>col-10</code></pre></div><div class="col col-2"><pre><code>col-2</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-11"><pre><code>col-11</code></pre></div><div class="col col-1"><pre><code>col-1</code></pre></div>
     </div>
-    <div class="rows">
+    <div class="cols">
       <div class="col col-12"><pre><code>col-12</code></pre></div>
     </div>
 
     <pre><code>
 
-    &lt;div class="rows"&gt;
+    &lt;!-- Column Container --&gt;
+    &lt;div class="cols"&gt;
+      &lt;!-- Two column sizes adding up to 12 --&gt;
       &lt;div class="col col-1"&gt;Size 1 Column&lt;/div&gt;
       &lt;div class="col col-11"&gt;Size 11 Column&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="rows"&gt;
+    &lt;!-- Column Container&gt;
+    &lt;div class="cols"&gt;
+      &lt;!-- Two column sizes adding up to 12 --&gt;
       &lt;div class="col col-6&gt;Size 6 Column&lt;/div&gt;
       &lt;div class="col col-6"&gt;Size 6 Column&lt;/div&gt;
     &lt;/div&gt;
 
     </code></pre>
 
-    <p>Columns are created with the <code>cols</code> class and the children should have the <code>row</code> class.</p>
+    <p>Rows are created with the <code>rows</code> class and the children should have the <code>row</code> class. Each <code>row</code> can have an <code>h4</code> with a <code>row-title</code> class.</p>
 
-    <div class="cols">
+    <div class="rows">
 
       <div class="row"><p>Row 1</p></div>
       <div class="row"><p>Row 2</p></div>
@@ -340,7 +346,9 @@
 
     <pre><code>
 
-    &lt;div class="cols"&gt;
+    &lt;!-- Row Container --&gt;
+    &lt;div class="rows"&gt;
+      &lt;!-- Row Contents --&gt;
       &lt;div class="row"&gt;Row 1 Content&lt;/div&gt;
       &lt;div class="row"&gt;Row 2 Content&lt;/div&gt;
       &lt;div class="row"&gt;Row 3 Content&lt;/div&gt;
@@ -360,6 +368,50 @@
 
     <h3 class="section-title">Tiles</h2>
 
+    <p>Tiles are similar to columns. They are created using the <code>tiles</code> class and children should have the <code>tile</code> class. Each <code>tile</code> can have an <code>h4</code> with a <code>tile-title</code> class and a <code>p</code> with a <code>tile-text</code> class.
+
+    <div class="tiles">
+
+      <div class="tile has-border">
+
+        <h4 class="tile-title">Tile 1</h4>
+        <hr>
+        <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim, lorem ut lobortis interdum, mi felis scelerisque lectus, eu viverra urna ligula vitae tellus. Nunc ac est quis neque egestas ultrices tincidunt sed turpis. Nullam sollicitudin dui mollis velit vulputate.</p>
+
+      </div>
+
+      <div class="tile has-border has-shadow">
+
+        <h4 class="tile-title">Tile 2</h4>
+        <hr>
+        <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim, lorem ut lobortis interdum, mi felis scelerisque lectus, eu viverra urna ligula vitae tellus. Nunc ac est quis neque egestas ultrices tincidunt sed turpis. Nullam sollicitudin dui mollis velit vulputate.</p>
+
+      </div>
+
+    </div>
+
+    <pre><code>
+
+      &lt;!-- Tile Container --&gt;
+      &lt;div class="tiles"&gt;
+        &lt;!-- Tile With Border --&gt;
+        &lt;div class="tile has-border"&gt;
+          &lt;!-- Tile Title --&gt;
+          &lt;h4 class="tile-title"&gt;&lt;/h4&gt;
+          &lt;hr&gt;
+          &lt;!-- Tile Text --&gt;
+          &lt;p class="tile-text"&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- Tile With Border And Shadow --&gt;
+        &lt;div class="tile has-border has-shadow"&gt;
+          &lt;h4 class="tile-title"&gt;&lt;/h4&gt;
+          &lt;hr&gt;
+          &lt;p class="tile-text"&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    </code></pre>
+
   </div>
 
   <!-- END of TILES -->
@@ -378,6 +430,7 @@
 
     <pre><code>
 
+      &lt;!-- Blockquote --&gt;
       &lt;blockquote cite=""&gt;
         Blockquote Content
       &lt;/blockquote&gt;
@@ -396,6 +449,19 @@
 
     <h3 class="section-title">Code</h2>
 
+    <p>Small pieces of code can be written inside of text with the <code>&lt;code&gt;</code> tag, but larger sections of code work better when inside of <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags.</p>
+
+    <pre><code>
+
+    &lt;!-- Structured Code --&gt;
+    &lt;pre&gt;&lt;code&gt;
+      .col-1 {
+        flex-grow: 1;
+      }
+    &lt;/pre&gt;&lt;code&gt;
+
+    </code></pre>
+
   </div>
 
   <!-- END of CODE -->
@@ -406,7 +472,37 @@
 
   <div class="section">
 
-    <h3 class="section-title">Buttons</h2>
+    <h3 class="section-title">Buttons</h3>
+
+    <p>Buttons and inputs come with two style classes: <code>button-empty</code> and <code>button-filled</code>.</p>
+
+    <a class="button button-empty" href="">Anchor</a>
+    <button class="button-empty">Button</button>
+    <input class="button-empty" type="submit" value="Submit Input">
+    <input class="button-empty" type="button" value="Button Input">
+
+    <br>
+
+    <a class="button button-filled" href="">Anchor</a>
+    <button class="button-filled">Button</button>
+    <input class="button-filled" type="submit" value="Submit Input">
+    <input class="button-filled" type="button" value="Button Input">
+
+    <pre><code>
+
+    &lt;!-- Empty Buttons and Inputs&gt;
+    &lt;a class="button button-empty" href=""&gt;Anchor&lt;/a&gt;
+    &lt;button class="button-empty"&gt;Button&lt;/button&gt;
+    &lt;input clas="button-empty" type="submit" value="Submit Input"&gt;
+    &lt;input clas="button-empty" type="button" value="Button Input"&gt;
+
+    &lt;!-- Filled Buttons and Inputs&gt;
+    &lt;a class="button button-filled" href=""&gt;Anchor&lt;/a&gt;
+    &lt;button class="button-filled"&gt;Button&lt;/button&gt;
+    &lt;input clas="button-filled" type="submit" value="Submit Input"&gt;
+    &lt;input clas="button-filled" type="button" value="Button Input"&gt;
+
+    </code></pre>
 
   </div>
 
@@ -420,6 +516,107 @@
 
     <h3 class="section-title">Forms</h2>
 
+    <form action="example.php">
+
+      <fieldset>
+
+        <legend>Inputs</legend>
+
+        <p><label for="input_text">Text</label></p><input id="input_text" placeholder="Text Input" type="text">
+        <p><label for="input_password">Password</label></p><input id="input_password" placeholder="Password Input" type="password">
+        <p><label for="input_website">Web Address</label></p><input id="input_website" placeholder="https://www.google.com/" type="url">
+        <p><label for="input_email">Email Address</label></p><input id="input_email" placeholder="name@email.com" type="email">
+        <p><label for="input_phone">Phone Number</label></p><input id="input_phone" placeholder="(555)555-5555" type="tel">
+        <p><label for="input_search">Search</label></p><input id="input_search" placeholder="Search Term Input" type="search">
+        <p><label for="input_number">Number</label></p><input id="input_number" placeholder="Numerical Input" type="number">
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend>Selection</legend>
+
+        <p><label for="select">Options</label></p>
+
+        <select id="select">
+
+          <optgroup label="Group 1">
+            <option>
+              Option 1.1
+            </option>
+            <option>
+              Option 1.2
+            </option>
+            <option>
+              Option 1.3
+            </option>
+          </optgroup>
+
+          <optgroup label="Group 2">
+            <option>
+              Option 2.1
+            </option>
+            <option>
+              Option 2.2
+            </option>
+            <option>
+              Option 2.3
+            </option>
+          </optgroup>
+
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend>Checkboxes and Radios</legend>
+
+          <p><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox">Option 1</label></p>
+          <p><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox">Option 2</label></p>
+          <p><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox">Option 3</label></p>
+
+          <p><label for="radio1"><input id="radio1" name="radio" type="radio">Option 1</p>
+          <p><label for="radio2"><input id="radio2" name="radio" type="radio">Option 2</p>
+          <p><label for="radio3"><input id="radio3" name="radio" type="radio">Option 3</p>
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend>Textarea</legend>
+
+        <p><label for="textarea">Textarea</label></p>
+
+        <textarea cols="50" rows="10" id="textarea" placeholder="Enter your text."></textarea>
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend>Nested Fieldset Outer</legend>
+
+        <fieldset>
+
+          <legend>Nested Fieldset Inner</legend>
+
+        </fieldset>
+
+      </fieldset>
+
+    </form>
+
+    <pre><code>
+
+    &lt;!-- Form --&gt;
+    &lt;form&gt;
+      &lt;!-- Legend --&gt;
+      &lt;legend&gt;&lt;/legend&gt;
+      &lt;!-- Form Contents --&gt;
+    &lt;/form&gt;
+
+    </code></pre>
+
   </div>
 
   <!-- END of FORMS -->
@@ -431,6 +628,79 @@
   <div class="section">
 
     <h3 class="section-title">Tables</h2>
+
+    <table>
+
+      <caption>
+        One Table Title
+      </caption>
+
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>Item 1.1</td>
+          <td>Item 2.1</td>
+          <td>Item 3.1</td>
+        </tr>
+
+        <tr>
+          <td>Item 1.2</td>
+          <td>Item 2.2</td>
+          <td>Item 3.2</td>
+        </tr>
+
+        <tr>
+          <td>Item 1.3</td>
+          <td>Item 2.3</td>
+          <td>Item 3.3</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <pre><code>
+
+    &lt;!-- Table --&gt;
+    &lt;table&gt;
+      &lt;caption&gt;
+        Table Title
+      &lt;/caption&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Column 1&lt;/th&gt;
+          &lt;th&gt;Column 2&lt;/th&gt;
+          &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/r&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Item 1.1&lt;/td&gt;
+          &lt;td&gt;Item 2.1&lt;/td&gt;
+          &lt;td&gt;Item 3.1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Item 1.2&lt;/td&gt;
+          &lt;td&gt;Item 2.2&lt;/td&gt;
+          &lt;td&gt;Item 3.2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Item 1.3&lt;/td&gt;
+          &lt;td&gt;Item 2.3&lt;/td&gt;
+          &lt;td&gt;Item 3.3&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    </code></pre>
 
   </div>
 
@@ -444,9 +714,52 @@
 
     <h3 class="section-title">Navigation</h2>
 
+    <p>Horizontal navigation menus can be created with a <code>nav-list</code> class where the children have the <code>nav-list-item</code> class.</p>
+
+    <div class="nav-list">
+      <a class="nav-list-item" href="">Nav Item 1</a>
+      <a class="nav-list-item" href="">Nav Item 2</a>
+      <a class="nav-list-item" href="">Nav Item 3</a>
+    </div>
+
+    <pre><code>
+
+    &lt;!-- Navigation --&gt;
+    &lt;div class="nav-list"&gt;
+      &lt;a class="nav-list-item" href=""&gt;&lt;/a&gt;
+      &lt;a class="nav-list-item" href=""&gt;&lt;/a&gt;
+      &lt;a class="nav-list-item" href=""&gt;&lt;/a&gt;
+    &lt;/div&gt;
+
+    </code></pre>
+
   </div>
 
   <!-- END of NAVIGATION -->
+
+  <hr>
+
+  <!-- OTHER CLASSES -->
+
+  <div class="section">
+
+    <h3 class="section-title">Other Classes</h2>
+
+    <p>There are a few classes that can be applied to any element to save time writting CSS.</p>
+
+    <ul>
+      <li>
+        <code>has-border</code> - Add a border
+      </li>
+      <br>
+      <li>
+        <code>has-shadow</code> - Add a box-shadow
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- END of OTHER CLASSES -->
 
   <hr>
 
@@ -455,6 +768,25 @@
   <div class="section">
 
     <h3 class="section-title">Animations</h2>
+
+    <p>Hover over the buttons to see some of Pluto's built-in animations.</p>
+
+    <div class="cols">
+
+      <button class="button-filled glow">Button</button>
+      <button class="button-filled bounce">Button</button>
+      <button class="button-filled pulse">Button</button>
+
+    </div>
+
+    <pre><code>
+
+    &lt;!-- Animations --&gt;
+    &lt;button class="button-filled glow"&gt;Button&lt;/button&gt;
+    &lt;button class="button-filled bounce"&gt;Button&lt;/button&gt;
+    &lt;button class="button-filled pulse"&gt;Button&lt;/button&gt;
+
+    </code></pre>
 
   </div>
 
@@ -468,6 +800,25 @@
 
     <h3 class="section-title">Loaders</h2>
 
+    <p>Loaders are created within their own <code>div</code>s. They are created by using a combination of the <code>loader</code> class and a style class (<code>loader-1</code> through <code>loader-3</code>).</p><br>
+
+    <div class="cols">
+
+      <div class="loader loader-1"></div>
+      <div class="loader loader-2"></div>
+      <div class="loader loader-3"></div>
+
+    </div>
+
+    <pre><code>
+
+    &lt;!-- Loaders --&gt;
+    &lt;div class="loader loader-1&gt;&lt;/div&gt;
+    &lt;div class="loader loader-2&gt;&lt;/div&gt;
+    &lt;div class="loader loader-3&gt;&lt;/div&gt;
+
+    </code></pre>
+
   </div>
 
   <!-- END of LOADERS -->
@@ -476,7 +827,7 @@
 
   <div class="footer">
 
-    <h5 class="footer-title">Created by <a href="https://github.com/davidherszenhaut">David Herszenhaut</a> &copy; 2017</h5>
+    <h5 class="footer-title">Created by <a href="https://davidherszenhaut.github.io/">David Herszenhaut</a> &copy; 2017</h5>
 
   </div>
 

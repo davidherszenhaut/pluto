@@ -1,0 +1,183 @@
+/******************
+  GENERAL CHANGES
+*******************/
+
+html, body {
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background: #eee;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1;
+}
+
+/******************
+  TYPOGRAPHY
+*******************/
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
+h5 {
+  font-size: 2rem
+}
+
+h6 {
+  font-size: 1.4rem;
+}
+
+a:link,
+a:visited {
+  color: #333;
+}
+
+a:hover,
+a:active {
+  color: #a9b1bc;
+}
+
+p {
+  line-height: 24px;
+}
+
+/******************
+  LISTS
+*******************/
+
+ul, ol {
+  margin-left: -10px;
+}
+
+/******************
+  BLOCKQUOTES
+*******************/
+
+blockquote {
+  border-left: 5px solid #a9b1bc;
+  padding: 0.5rem;
+  padding-left: 3rem;
+  background: #dfdfdf;
+  border-radius: 3px;
+}
+
+/******************
+  PRE AND CODE
+*******************/
+
+pre > code {
+  white-space: pre;
+  display: block;
+}
+
+code {
+  border: 1px solid #a9b1bc;
+  border-radius: 3px;
+  background: #dfdfdf;
+  white-space: nowrap;
+  padding: 0.25rem 0;
+}
+
+/******************
+  BUTTONS
+*******************/
+
+.button, button, input {
+  min-width: 20%;
+  padding: 0.6rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border: 1px solid #a9b1bc;
+  border-radius: 3px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.button:hover,
+.button:active,
+button:hover,
+button:active,
+input:hover,
+input:active {
+  cursor: pointer;
+}
+
+.button-empty {
+  background: #eee;
+}
+
+.button-empty:hover,
+.button-empty:active {
+  color: #a9b1bc;
+}
+
+.button-filled {
+  background: #dfdfdf;
+}
+
+.button-filled:hover,
+.button-filled:active {
+  background: #a9b1bc;
+  color: #eee;
+}
+
+/******************
+  FORMS
+*******************/
+
+fieldset {
+  margin: 2rem 0;
+  border-radius: 3px;
+  border: 1px groove #a9b1bc;
+}
+
+legend {
+  padding: 0 5px;
+}
+
+/******************
+  TABLES
+*******************/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+}
+
+caption {
+  font-weight: bold;
+}
+
+thead {
+  text-align: left;
+}
+
+th {
+  background: #dfdfdf;
+}
+
+tr:hover {
+  background: #a9b1bc;
+}
+
+/******************
+  IMAGES
+*******************/
+
+img {
+  height: auto;
+}

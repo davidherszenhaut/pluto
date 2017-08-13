@@ -1,70 +1,68 @@
 /******************
-    GENERAL CHANGES
+  GENERAL CHANGES
 *******************/
 
-html, body {
-    text-align: left;
-    font-family: "Open Sans", sans-serif;
-    color: #333;
-    background: #eee;
+.wrapper {
+  max-width: 50em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
 }
 
 /******************
-    TYPOGRAPHY
+  PRE AND CODE
 *******************/
 
-/******************
-    LISTS
-*******************/
+.cdn-link {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
 
 /******************
-    ROWS
+  LOADERS
 *******************/
 
-/******************
-    COLUMNS
-*******************/
+.loader {
+  padding: 0 1rem;
+  margin: 0 auto;
+}
 
 /******************
-    TILES
+  HEADER
 *******************/
 
-/******************
-    BLOCKQUOTES
-*******************/
+.header {
+  text-align: center;
+}
+
+.header-title {
+  letter-spacing: 5px;
+}
+
+.header-subtitle {
+  font-weight: normal;
+}
 
 /******************
-    PRE AND CODE
+  FOOTER
 *******************/
 
-/******************
-    BUTTONS
-*******************/
-
-/******************
-    FORMS
-*******************/
-
-/******************
-    TABLES
-*******************/
-
-/******************
-    NAVIGATION
-*******************/
-
-/******************
-    ANIMATIONS
-*******************/
-
-/******************
-    LOADERS
-*******************/
-
-/******************
-    IMAGES
-*******************/
-
-/******************
-    HEADER
-*******************/
+.footer {
+  padding-top: 10rem;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
