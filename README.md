@@ -1,4 +1,5 @@
 # pluto
-A CSS framework with built-in animations.
 
-https://davidherszenhaut.github.io/pluto/
+A CSS framework based on flexbox with built-in animations.
+
+[pluto](https://davidherszenhaut.github.io/pluto/)
